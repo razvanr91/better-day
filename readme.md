@@ -11,7 +11,7 @@ Don't you just wish that you had someone that could just pull you out of bed?
 
 #### The reason you will get out of bed, you ask ?!
 
-Well it's simple. In order to get a awesome and brilliant quote that will make you'r day awesome and brilliant, you have to get out of bed, turn your computer on, make sure you have node installed, and the run this script!
+Well it's simple. In order to get a awesome and brilliant quote that will make you'r day awesome and brilliant, you have to get out of bed, turn your computer on, make sure you have node installed, and then run this script!
 Not to mention you need to know how to run the command prompt!
 
 #### How will this make your day better?
