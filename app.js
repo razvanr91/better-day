@@ -30,22 +30,50 @@ const quotes = {
 const randomNumber = number => Math.floor(Math.random() * number);
 
 
+// Start app by taking input from user to get personalized feedback for each user based on their mood, after calling the deliverQuotes function.
 const startApp = async () => {
+
+  // Open readLine
   const rl = readLine.createInterface({ input, output });
 
   const user = await rl.question("What is your name?\r\n> ");
   console.log(`Hello, ${user}!\r\n`);
 
-  const answer = await (await rl.question(`How is your day? Please answer with either 'good' or 'bad' :\r\n> `)).toLowerCase();
-  console.log(`Your answer is ${answer}`);
+  const answer = (await rl.question(`How is your day, ${user}? Please answer with either 'good' or 'bad' :\r\n> `)).toLowerCase();
+
+  // Deliver qupte based on the mood passed in by the user.
+  deliverQuotes(answer, user);
 
 
   // Close readLine
   rl.close();
 }
 
-const deliverQuotes = state => {
+// Quote generator app based on a mood that is passed in.
+// The values can be either good or bad. If mood is good return motivational quote. If bad, return funny and motivational quote.
+// If something else is passed in, return a motivational quote.
 
+const deliverQuotes = (state, user) => {
+  switch (state) {
+    case "good":
+      console.log(`I'm glad to see you are having a good day, ${user}! I will give you a funny motivational quote to make it even better.`);
+      console.log(quotes["funny"][randomNumber(quotes["funny"].length)]);
+      break;
+    case "bad":
+      console.log(`I'm sorry you're having a bad day, ${user}. Don't worry!`);
+      console.log(quotes["motivational"][randomNumber(quotes["motivational"].length)]);
+      console.log(`And never forget ${user}...`);
+      console.log(quotes["funny"][randomNumber(quotes["funny"].length)]);
+      break;
+    default:
+      console.log(`Ok...But never forget ${user}...`);
+      console.log(quotes["motivational"][randomNumber(quotes["motivational"].length)]);
+      break;
+  }
+
+  console.log();
+  console.log("********************");
+  console.log(`DISCLAMER - All quotes have been taken from : "https://www.shopify.com/blog/motivational-quotes#8" .`);
 }
 startApp();
 
