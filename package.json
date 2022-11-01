@@ -1,0 +1,25 @@
+{
+  "name": "better-day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razvanr91/better-day.git"
+  },
+  "author": "Razvan Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razvanr91/better-day/issues"
+  },
+  "homepage": "https://github.com/razvanr91/better-day#readme",
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4"
+  }
+}
