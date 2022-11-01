@@ -38,6 +38,9 @@ const startApp = async () => {
 
   const answer = await (await rl.question(`How is your day? Please answer with either 'good' or 'bad' :\r\n> `)).toLowerCase();
   console.log(`Your answer is ${answer}`);
+
+
+  // Close readLine
   rl.close();
 }
 
